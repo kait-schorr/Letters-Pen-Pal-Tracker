@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 .vs/slnx.sqlite
 
+=======
+>>>>>>> 0e4023876a0c7e091234b2a6add2edeb270afedb
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # dependencies
@@ -21,4 +24,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
+>>>>>>> 0e4023876a0c7e091234b2a6add2edeb270afedb
+=======
 >>>>>>> 0e4023876a0c7e091234b2a6add2edeb270afedb
