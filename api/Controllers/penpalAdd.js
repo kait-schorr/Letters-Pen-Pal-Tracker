@@ -3,13 +3,12 @@ const PenPal = require('../Models/PenPal');
 const User = require('../Models/User');
 
 const penpalAdd = (req, res) => {
-  const { userId, name, address, letters } = req.body;
+  const { userId, name, address } = req.body;
   let noteId;
 
   const newestPenPal = new PenPal({
     name: name,
     address: address,
-    letters: letters,
   });
 
   newestPenPal
