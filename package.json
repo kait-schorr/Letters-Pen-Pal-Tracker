@@ -5,7 +5,7 @@
   "main": "auth.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/kait-schorr/Letters-Pen-Pal-Tracker#readme",
   "dependencies": {
     "cors": "^2.8.4",
+    "bcrypt": "^1.0.3",
     "express": "^4.16.3",
     "helmet": "^3.12.1",
     "jsonwebtoken": "^8.3.0",

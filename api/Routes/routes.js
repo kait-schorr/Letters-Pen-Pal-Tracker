@@ -1,3 +1,7 @@
+const { authenticate } = require('../Utils/middleware');
+const userCreate = require('../Controllers/userCreate');
+const userLogin = require('../Controllers/userLogin');
+
 const penpalAdd = require('../Controllers/penpalAdd');
 const penpalDelete = require('../Controllers/penpalDelete');
 const penpalEdit = require('../Controllers/penpalEdit');
@@ -11,6 +15,9 @@ const letterGet = require('../Controllers/letterGet');
 const letterGetOne = require('../Controllers/letterGetOne');
 
 module.exports = server => {
+  server.route('/api/login').post(userLogin);
+  server.route('/api/signup').post(userCreate);
+
   server.get('/api/penpals/:id', authenticate, penpalGet);
   server.get('/api/penpal/:id', authenticate, penpalGetOne);
   server.route('/api/penpals').post(authenticate, penpalAdd);
