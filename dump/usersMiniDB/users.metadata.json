@@ -1,1 +1,0 @@
-{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"usersMiniDB.users"},{"v":2,"unique":true,"key":{"username":1},"name":"username_1","ns":"usersMiniDB.users","background":true}],"uuid":"86bb3b52cdee4800b2e7df8d680a3106"}
