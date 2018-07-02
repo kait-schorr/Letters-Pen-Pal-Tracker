@@ -7,20 +7,9 @@ const PenPalSchema = new mongoose.Schema({
     required: true,
   },
 
-  address: {
-    streetNumber: Number,
-    streetName: String,
-    aptNum: { type: String, required: false },
-    city: String,
-    state: String,
-    country: String,
-    zipcode: Number,
-    required: true,
-  },
+  address: { type: ObjectId, required: true },
 
-  letters: {
-    type: [{ type: ObjectId, ref: 'Letter' }],
-  },
+  letters: [{ type: ObjectId, ref: 'Letter' }],
 });
 
 module.exports = mongoose.model('PenPal', PenPalSchema);
