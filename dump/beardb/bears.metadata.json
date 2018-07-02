@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"beardb.bears"},{"v":2,"key":{"name":1},"name":"name_1","ns":"beardb.bears","background":true},{"v":2,"unique":true,"key":{"tag":1},"name":"tag_1","ns":"beardb.bears","background":true}],"uuid":"9c00e5ad62944cf0bd2d7df712a1291a"}

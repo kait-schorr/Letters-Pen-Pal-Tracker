@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"starwars.vehicles"},{"v":2,"unique":true,"key":{"key":1},"name":"key_1","ns":"starwars.vehicles","background":true}],"uuid":"cb6e370ec1b14d90aa1756f11dbe9301"}

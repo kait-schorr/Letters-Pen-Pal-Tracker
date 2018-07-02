@@ -22,11 +22,11 @@ module.exports = server => {
   server.route('/api/penpal/:id').get(authenticate, penpalGetOne);
   server.route('/api/penpals').post(authenticate, penpalAdd);
   server.route('/api/penpals/:id').delete(authenticate, penpalDelete);
-  // server.route('/api/penpals/:id').put(authenticate, penpalEdit);
+  server.route('/api/penpals/:id').put(authenticate, penpalEdit);
 
   server.route('/api/letters/:id').get(authenticate, letterGet);
   server.route('/api/letter/:id').get(authenticate, letterGetOne);
   server.route('/api/letters').post(authenticate, letterAdd);
   server.route('/api/letters/:id').delete(authenticate, letterDelete);
-  // server.route('/api/letters/:id').put(authenticate, letterEdit);
+  server.route('/api/letters/:id').put(authenticate, letterEdit);
 };

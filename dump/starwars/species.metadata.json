@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"starwars.species"},{"v":2,"key":{"name":1},"name":"name_1","ns":"starwars.species","background":true},{"v":2,"unique":true,"key":{"key":1},"name":"key_1","ns":"starwars.species","background":true}],"uuid":"8dfc4b3fa26c4b018767942fe124db9e"}
