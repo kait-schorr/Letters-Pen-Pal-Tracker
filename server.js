@@ -9,9 +9,8 @@ const routes = require('./api/Routes/routes');
 
 const server = express();
 
-console.log(process.env.MONGO_URI);
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect('mongodb://admin:admin0@ds125841.mlab.com:25841/penpal')
   .then(() => {
     console.log('Connected to Mongo.');
   })
