@@ -1,10 +1,10 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const PenPalSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true
+    required: true,
   },
 
   address: {
@@ -15,12 +15,12 @@ const PenPalSchema = new mongoose.Schema({
     state: String,
     country: String,
     zipcode: Number,
-    required: true
+    required: true,
   },
 
   letters: {
-    type: { type: ObjectId, ref: "Letter" }
-  }
+    type: [{ type: ObjectId, ref: 'Letter' }],
+  },
 });
 
-module.exports = mongoose.model("PenPal", PenPalSchema);
+module.exports = mongoose.model('PenPal', PenPalSchema);

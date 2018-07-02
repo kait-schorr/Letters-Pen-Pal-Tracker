@@ -1,29 +1,29 @@
-const express = require("express");
-const helmet = require("helmet");
-const cors = require("cors");
-const morgan = require("morgan");
-const mongoose = require("mongoose");
+const express = require('express');
+const helmet = require('helmet');
+const cors = require('cors');
+const morgan = require('morgan');
+const mongoose = require('mongoose');
 
-const routes = require("./api/Routes/routes");
+const routes = require('./api/Routes/routes');
 
 const server = express();
 
 mongoose
-  .connect("mongodb://localhost/letters")
+  .connect('mongodb://localhost/letters')
   .then(() => {
-    console.log("Connected to Mongo.");
+    console.log('Connected to Mongo.');
   })
   .catch(err => {
-    console.log("Error connecting to the database.");
+    console.log('Error connecting to the database.');
   });
 
 server.use(helmet());
 server.use(cors());
-server.use(morgan("combined"));
+server.use(morgan('combined'));
 server.use(express.json());
 
-server.get("/", (req, res) => {
-  res.status(200).json({ api: "running" });
+server.get('/', (req, res) => {
+  res.status(200).json({ api: 'running' });
 });
 
 routes(server);
