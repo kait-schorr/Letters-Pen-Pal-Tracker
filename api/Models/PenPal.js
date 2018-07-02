@@ -7,7 +7,11 @@ const PenPalSchema = new mongoose.Schema({
     required: true,
   },
 
-  address: { type: ObjectId, required: true },
+  // address: { type: ObjectId, ref: 'Address', required: false },
+  address: {
+    type: String,
+    required: true,
+  },
 
   letters: [{ type: ObjectId, ref: 'Letter' }],
 });
