@@ -1,9 +1,13 @@
 const PenPal = require('../Models/PenPal');
 
 const penpalEdit = (req, res) => {
-  const { name, address } = req.body;
+  const { name, address, letters } = req.body;
 
-  PenPal.findByIdAndUpdate(req.params.id, { title, content }, { new: true })
+  PenPal.findByIdAndUpdate(
+    req.params.id,
+    { name, address, letters },
+    { new: true }
+  )
     .then(updatedPenPal => {
       res.status(200).json(updatedPenPal);
     })
