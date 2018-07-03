@@ -3,27 +3,30 @@ import "./App.css";
 import Authenticate from "./Authenticate/Authenticate";
 import PenpalsList from "./components/PenpalsList";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Landing from "./landingPage";
+import Landing from "./components/landingPage";
 import NavBar from "./components/NavBar";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      user: ""
+      user: { username: "", userId: "" }
     };
+    this.setUser = this.setUser.bind(this);
   }
 
   componentDidMount() {
     this.setState({ user: this.setState.user });
   }
-
+  setUser(user) {
+    this.setState({ user: user });
+  }
   render() {
     return (
       <div className="App">
         <NavBar />
-        <Landing />
-        <Route path="/" component={PenpalsList} />
+        <Landing setUser={this.setUser} />
+        <Route path="/" render={() => <PenpalsList user={this.state.user} />} />
       </div>
     );
   }
