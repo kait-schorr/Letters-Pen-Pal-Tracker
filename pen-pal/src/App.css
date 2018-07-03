@@ -4,6 +4,10 @@
 
 .title {
   font-size: 3em;
+  font-family: "Pacifico", cursive;
+}
+.card-title {
+  font-family: "Pacifico", cursive;
 }
 
 .App-intro {
@@ -20,4 +24,10 @@
   padding: 0;
   text-decoration: none;
   color: black;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 40px;
 }
