@@ -103,6 +103,17 @@ class Landing extends Component {
                   placeholder="Enter your password"
                 />
               </FormGroup>
+              <FormGroup>
+                <Label for="Password">Confirm Password</Label>
+                <Input
+                  required
+                  type="password"
+                  name="password"
+                  value={this.state.confirmPassword}
+                  onChange={this.inputHandler}
+                  placeholder="Enter your password"
+                />
+              </FormGroup>
               <Button disabled={!this.validateForm()}>Submit</Button>
             </Form>
           </ModalBody>
