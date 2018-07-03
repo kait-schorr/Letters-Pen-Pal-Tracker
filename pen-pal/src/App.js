@@ -1,60 +1,31 @@
 import React, { Component } from "react";
 import "./App.css";
-import friends from "./data";
-import PenpalsList from "./components/PenpalsList";
 import Authenticate from "./Authenticate/Authenticate";
+import PenpalsList from "./components/PenpalsList";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import PenpalForm from "./components/PenpalForm";
-import { Container, Row, Col, Button } from "reactstrap";
-
-const routes = [
-  {
-    path: "/api/login",
-    main: () => <login />
-  }
-];
+import Landing from "./landingPage";
+import NavBar from "./components/NavBar";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      penpals: [],
-      penpal: ""
+      user: ""
     };
   }
 
   componentDidMount() {
-    this.setState({ penpals: [...this.state.penpals] });
+    this.setState({ user: this.setState.user });
   }
-
-  addPenpal = event => {
-    event.preventDefault();
-    const penpals = this.state.penpals.slice();
-    penpals.push({
-      name: this.state.penpal,
-      address: this.state.penpal,
-      letters: this.state.penpal
-    });
-    this.setState({ penpals, penpal: "" });
-  };
-
-  submitHandler = event => {
-    this.setState({ [event.target.name]: event.target.value });
-  };
 
   render() {
     return (
       <div className="App">
-        <PenpalForm
-          penpal={this.state.penpal}
-          submitHandler={this.submitHandler}
-          addPenpal={this.addPenpal}
-        />
-        <h1>Pen Pals</h1>
-        <PenpalsList penpals={this.state.penpals} />
+        <NavBar />
+        <Landing />
+        <Route path="/" component={PenpalsList} />
       </div>
     );
   }
 }
-
-export default Authenticate(App);
+export default App;

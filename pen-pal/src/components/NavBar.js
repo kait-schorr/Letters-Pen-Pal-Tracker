@@ -1,0 +1,48 @@
+import React, { Component } from "react";
+import {
+  Container,
+  Navbar,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
+} from "reactstrap";
+
+class NavBar extends Component {
+  render() {
+    return (
+      <Container className="mt-5">
+        <h1 className="ml-auto title" href="/">
+          Letters
+        </h1>
+        <Navbar color="light" light expand="sm">
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink href="#">Pen Pals</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#">About</NavLink>
+            </NavItem>
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                Username
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem href="#">Account</DropdownItem>
+                <DropdownItem href="#">Help</DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem href="#">Log Out</DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+          </Nav>
+        </Navbar>
+      </Container>
+    );
+  }
+}
+
+export default NavBar;

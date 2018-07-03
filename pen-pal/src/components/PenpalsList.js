@@ -5,7 +5,8 @@ import "./PenpalList.css";
 const PenpalsList = props => {
   return (
     <div className="friends-card">
-      {props.friends.map(friend => (
+      Penpal List
+      {/* {props.friends.map(friend => (
         <Penpal
           key={friend.id}
           name={friend.name}
@@ -13,7 +14,7 @@ const PenpalsList = props => {
           letter={friend.letter}
           // picture={friend.picture}
         />
-      ))}
+      ))} */}
     </div>
   );
 };
