@@ -1,0 +1,30 @@
+{
+  "name": "letters-pen-pal-tracker",
+  "version": "1.0.0",
+  "description": "Entry into the July Lambda School Hackathon",
+  "main": "auth.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kait-schorr/Letters-Pen-Pal-Tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kait-schorr/Letters-Pen-Pal-Tracker/issues"
+  },
+  "homepage": "https://github.com/kait-schorr/Letters-Pen-Pal-Tracker#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "helmet": "^3.12.1",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.1.7",
+    "morgan": "^1.9.0"
+  }
+}
