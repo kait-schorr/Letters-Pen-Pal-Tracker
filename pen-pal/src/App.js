@@ -25,7 +25,11 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar user={this.state.user} />
-        <Landing setUser={this.setUser} />
+        <Route
+          exact
+          path="/"
+          render={() => <Landing setUser={this.setUser} />}
+        />
         <Route
           path="/penpals"
           render={() => <PenpalsList user={this.state.user} />}

@@ -16,10 +16,10 @@ class NavBar extends Component {
   render() {
     return (
       <Container className="mt-5">
-        <h1 className="ml-auto title" href="/">
-          Letters
-        </h1>
         <Navbar color="light" light expand="sm">
+          <h1 className="ml-auto title" href="/">
+            Letters
+          </h1>
           <Nav className="ml-auto" navbar>
             <NavItem>
               <NavLink href="#">Pen Pals</NavLink>

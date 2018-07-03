@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Penpal from "./Penpal";
 import "./PenpalList.css";
 import axios from "axios";
+import { Container, Row } from "reactstrap";
 
 class PenpalsList extends Component {
   constructor(props) {
@@ -36,15 +37,19 @@ class PenpalsList extends Component {
     return (
       <div className="friends-card">
         <h1>PenpalList Component</h1>
-        {this.state.penpals.map(penpal => (
-          <Penpal
-            key={penpal._id}
-            name={penpal.name}
-            address={penpal.address}
-            letters={penpal.letters}
-            // picture={friend.picture}
-          />
-        ))}
+        <Container>
+          <Row>
+            {this.state.penpals.map(penpal => (
+              <Penpal
+                key={penpal._id}
+                name={penpal.name}
+                address={penpal.address}
+                letters={penpal.letters}
+                // picture={friend.picture}
+              />
+            ))}
+          </Row>
+        </Container>
       </div>
     );
   }
