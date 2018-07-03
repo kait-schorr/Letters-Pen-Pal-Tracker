@@ -72,7 +72,7 @@ class Landing extends Component {
   render() {
     return (
       <div>
-        <Button color="danger" onClick={this.toggleSignUp}>
+        <Button className="mr-1" color="danger" onClick={this.toggleSignUp}>
           Sign Up
         </Button>
         <Modal isOpen={this.state.signUpModal} toggle={this.toggleSignUp}>
@@ -123,7 +123,7 @@ class Landing extends Component {
             </Button>
           </ModalFooter>
         </Modal>
-        <Button color="danger" onClick={this.toggleLogin}>
+        <Button className="ml-1" color="danger" onClick={this.toggleLogin}>
           Login
         </Button>
         <Modal isOpen={this.state.loginModal} toggle={this.toggleLogin}>

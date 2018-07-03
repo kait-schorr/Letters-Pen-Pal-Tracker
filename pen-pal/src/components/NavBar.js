@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import {
-  Collapse,
+  Container,
   Navbar,
-  NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
@@ -16,33 +15,32 @@ import {
 class NavBar extends Component {
   render() {
     return (
-      <div>
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
-
+      <Container className="mt-5">
+        <h1 className="ml-auto title" href="/">
+          Letters
+        </h1>
+        <Navbar color="light" light expand="sm">
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="#">Pen Pals</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                GitHub
-              </NavLink>
+              <NavLink href="#">About</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Options
+                Username
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>Option 1</DropdownItem>
-                <DropdownItem>Option 2</DropdownItem>
+                <DropdownItem href="#">Account</DropdownItem>
+                <DropdownItem href="#">Help</DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
+                <DropdownItem href="#">Log Out</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
         </Navbar>
-      </div>
+      </Container>
     );
   }
 }
