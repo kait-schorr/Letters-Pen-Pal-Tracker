@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./App.css";
 import friends from "./data";
-import FriendsList from "./components/FriendsList";
+import FriendsList from "./components/PenpalsList";
 import Authenticate from "./Authenticate/Authenticate";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import FriendForm from "./components/FriendForm";
+import FriendForm from "./components/PenpalForm";
 import { Container, Row, Col, Button } from "reactstrap";
 
 const routes = [
@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.setState({ penals: [...penpals] });
+    this.setState({ penpals: [...this.state.penpals] });
   }
 
   addPenpal = event => {
