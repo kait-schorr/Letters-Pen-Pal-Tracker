@@ -3,12 +3,13 @@ const Letter = require('../Models/Letter');
 const User = require('../Models/User');
 
 const letterAdd = (req, res) => {
-  const { userId, date, outbound, letterId, image } = req.body;
+  const { userId, penpal, date, outbound, image } = req.body;
+  let letterId;
 
   const newestLetter = new Letter({
     date: date,
     outbound: outbound,
-    letterId: letterId,
+    penpal: penpal,
     image: image,
   });
 
@@ -19,7 +20,7 @@ const letterAdd = (req, res) => {
       User.findByIdAndUpdate(
         { _id: userId },
         {
-          $push: { letter: letterId },
+          $push: { letters: letterId },
         }
       )
         .then(user => {
