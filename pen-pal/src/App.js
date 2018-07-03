@@ -24,7 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <NavBar />
+        <NavBar user={this.state.user} />
         <Landing setUser={this.setUser} />
         <Route path="/" render={() => <PenpalsList user={this.state.user} />} />
       </div>

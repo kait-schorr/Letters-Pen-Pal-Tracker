@@ -27,17 +27,19 @@ class NavBar extends Component {
             <NavItem>
               <NavLink href="#">About</NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Username
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem href="#">Account</DropdownItem>
-                <DropdownItem href="#">Help</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem href="#">Log Out</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
+            {this.props.user != undefined && (
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  {this.props.user.username}
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem href="#">Account</DropdownItem>
+                  <DropdownItem href="#">Help</DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem href="#">Log Out</DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+            )}
           </Nav>
         </Navbar>
       </Container>
