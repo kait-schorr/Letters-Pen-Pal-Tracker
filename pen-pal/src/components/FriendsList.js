@@ -9,9 +9,9 @@ const FriendsList = props => {
         <Friend
           key={friend.id}
           name={friend.name}
-          age={friend.age}
-          email={friend.email}
-          picture={friend.picture}
+          penpal={friend.penpal}
+          letter={friend.letter}
+          // picture={friend.picture}
         />
       ))}
     </div>

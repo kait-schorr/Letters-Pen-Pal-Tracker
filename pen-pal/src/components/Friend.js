@@ -1,15 +1,14 @@
 import React from "react";
 import "./FriendsList.css";
+import { Card, CardImg, CardText, CardBody } from "reactstrap";
 
 const Friend = props => {
   return (
-    <div className="friend">
-      <div>
-        <img src={props.picture} />
-      </div>
-      <div>{props.name}</div>
-      <div>{props.age}</div>
-      <div>{props.email}</div>
+    <div>
+      <Card>
+        <CardImg top width="100%" src={props.picture} alt="broken image" />
+        <CardBody>{props.name}</CardBody>
+      </Card>
     </div>
   );
 };
