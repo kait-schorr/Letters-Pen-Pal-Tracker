@@ -1,5 +1,5 @@
 import React from "react";
-import "./FriendsList.css";
+import "./PenpalList.css";
 import { Card, CardImg, CardText, CardBody } from "reactstrap";
 
 const Friend = props => {

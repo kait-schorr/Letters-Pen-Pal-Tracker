@@ -1,12 +1,12 @@
 import React from "react";
-import Friend from "./Friend";
-import "./FriendsList.css";
+import Penpal from "./Penpal";
+import "./PenpalList.css";
 
-const FriendsList = props => {
+const PenpalsList = props => {
   return (
     <div className="friends-card">
       {props.friends.map(friend => (
-        <Friend
+        <Penpal
           key={friend.id}
           name={friend.name}
           penpal={friend.penpal}
@@ -18,4 +18,4 @@ const FriendsList = props => {
   );
 };
 
-export default FriendsList;
+export default PenpalsList;

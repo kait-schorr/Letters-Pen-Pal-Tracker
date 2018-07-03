@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./App.css";
 import friends from "./data";
-import FriendsList from "./components/PenpalsList";
+import PenpalsList from "./components/PenpalsList";
 import Authenticate from "./Authenticate/Authenticate";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import FriendForm from "./components/PenpalForm";
+import PenpalForm from "./components/PenpalForm";
 import { Container, Row, Col, Button } from "reactstrap";
 
 const routes = [
