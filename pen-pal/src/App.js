@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-import Authenticate from "./Authenticate/Authenticate";
 import PenpalsList from "./components/PenpalsList";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import LettersList from "./components/LettersList";
+import { Route, Link } from "react-router-dom";
 import Landing from "./components/landingPage";
 import NavBar from "./components/NavBar";
 
@@ -33,6 +33,10 @@ class App extends Component {
         <Route
           path="/penpals"
           render={() => <PenpalsList user={this.state.user} />}
+        />
+        <Route
+          path="/letters"
+          render={() => <LettersList user={this.state.user} />}
         />
       </div>
     );

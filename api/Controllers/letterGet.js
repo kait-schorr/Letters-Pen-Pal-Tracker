@@ -6,7 +6,7 @@ const letterGet = (req, res) => {
   if (req.params.id) {
     const id = req.params.id;
     User.findById(id)
-      .populate('notes')
+      .populate('letters')
       .then(user => {
         res.status(200).json(user.letters);
       })

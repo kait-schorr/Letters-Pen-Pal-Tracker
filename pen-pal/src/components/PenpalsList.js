@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Penpal from "./Penpal";
-import "./PenpalList.css";
 import axios from "axios";
 import { Container, Row } from "reactstrap";
+import { Link } from "react-router-dom";
 
 class PenpalsList extends Component {
   constructor(props) {
@@ -35,11 +35,10 @@ class PenpalsList extends Component {
 
   render() {
     return (
-      <div className="friends-card">
-        <h1>PenpalList Component</h1>
-        <Container>
-          <Row>
-            {this.state.penpals.map(penpal => (
+      <Container>
+        <Row>
+          {this.state.penpals.map(penpal => (
+            <Link to="/letters">
               <Penpal
                 key={penpal._id}
                 name={penpal.name}
@@ -47,10 +46,10 @@ class PenpalsList extends Component {
                 letters={penpal.letters}
                 // picture={friend.picture}
               />
-            ))}
-          </Row>
-        </Container>
-      </div>
+            </Link>
+          ))}
+        </Row>
+      </Container>
     );
   }
 }
