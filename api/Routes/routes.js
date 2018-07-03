@@ -15,9 +15,11 @@ const letterGet = require('../Controllers/letterGet');
 const letterGetOne = require('../Controllers/letterGetOne');
 
 module.exports = server => {
+  // =============== USER ENDPOINTS ======================
   server.route('/api/login').post(userLogin);
   server.route('/api/signup').post(userCreate);
 
+  // ================ PENPAL ENDPOINTS ==================
   // :id is to be a User ID, will return a users penpals
   server.route('/api/penpals/:id').get(authenticate, penpalGet);
 
@@ -31,7 +33,8 @@ module.exports = server => {
   // :id is to be a PenPal ID, will update that PenPal object
   server.route('/api/penpals/:id').put(authenticate, penpalEdit);
 
-  // :id is to be a User ID, will return all letters a User has
+  // =============== LETTER ENDPOINTS ======================
+  // :id is to be a User ID, will return array of letter ObjectId's a User has
   server.route('/api/letters/:id').get(authenticate, letterGet);
 
   // :id is to be a Letter ID, will return that letter's object

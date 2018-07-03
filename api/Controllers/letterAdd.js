@@ -3,13 +3,14 @@ const Letter = require('../Models/Letter');
 const User = require('../Models/User');
 
 const letterAdd = (req, res) => {
-  const { userId, penpal, date, outbound, image } = req.body;
+  const { userId, penpal, date, outbound, notes, image } = req.body;
   let letterId;
 
   const newestLetter = new Letter({
     date: date,
     outbound: outbound,
     penpal: penpal,
+    notes: notes,
     image: image,
   });
 
@@ -24,12 +25,10 @@ const letterAdd = (req, res) => {
         }
       )
         .then(user => {
-          res
-            .status(200)
-            .json({
-              Message: `Letter Successfully Saved to users database!`,
-              user,
-            });
+          res.status(200).json({
+            Message: `Letter Successfully Saved to users database!`,
+            user,
+          });
         })
         .catch(err => {
           res.status(500).json({

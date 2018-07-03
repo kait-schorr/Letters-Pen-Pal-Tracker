@@ -1,11 +1,11 @@
 const Letter = require('../Models/Letter');
 
 const letterEdit = (req, res) => {
-  const { date, outbound, penpal, image } = req.body;
+  const { date, outbound, penpal, notes, image } = req.body;
 
   Letter.findByIdAndUpdate(
     req.params.id,
-    { date, outbound, penpal, image },
+    { date, outbound, penpal, notes, image },
     { new: true }
   )
     .then(updatedLetter => {
