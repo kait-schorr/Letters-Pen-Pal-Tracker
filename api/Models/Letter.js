@@ -17,6 +17,11 @@ const LetterSchema = new mongoose.Schema({
     ref: 'PenPal',
   },
 
+  notes: {
+    type: String,
+    required: false,
+  },
+
   image: {
     type: String,
     required: false,

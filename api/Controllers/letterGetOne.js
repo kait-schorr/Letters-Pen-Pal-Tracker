@@ -1,12 +1,12 @@
 const Letter = require('../Models/Letter');
 
 const letterGetOne = (req, res) => {
-  // return the title and contents of the letter id supplied
+  // return the letter object of the letter ObjectId supplied
   if (req.params.id) {
     Letter.findById(req.params.id)
       .then(letter => {
         console.log(letter);
-        res.status(200).json({ title: letter.title, content: letter.content });
+        res.status(200).json(letter);
       })
       .catch(err => {
         res.status(500).json({
