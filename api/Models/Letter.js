@@ -3,7 +3,7 @@ const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const LetterSchema = new mongoose.Schema({
   date: {
-    type: Date,
+    type: String,
     required: true,
   },
 
