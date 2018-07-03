@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./App.css";
 import friends from "./data";
-import FriendsList from "./components/FriendsList";
+import PenpalsList from "./components/PenpalsList";
 import Authenticate from "./Authenticate/Authenticate";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import FriendForm from "./components/FriendForm";
+import PenpalForm from "./components/PenpalForm";
 import { Container, Row, Col, Button } from "reactstrap";
 import Landing from "./landingPage"
 
@@ -24,9 +24,15 @@ class App extends Component {
     };
   }
 
+<<<<<<< HEAD
   // componentDidMount() {
   //   this.setState({ penals: [...penpals] });
   // }
+=======
+  componentDidMount() {
+    this.setState({ penpals: [...this.state.penpals] });
+  }
+>>>>>>> 4a396008346b04a1910ce88b66780a3927aa8b7e
 
   // addPenpal = event => {
   //   event.preventDefault();
