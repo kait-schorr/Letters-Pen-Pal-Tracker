@@ -3,12 +3,13 @@ import "./App.css";
 import friends from "./data";
 import FriendsList from "./components/FriendsList";
 import Authenticate from "./Authenticate/Authenticate";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 import FriendForm from "./components/FriendForm";
+import { Container, Row, Col, Button } from "reactstrap";
 
 const routes = [
   {
-    path: ""
+    path: "/api/login"
   }
 ];
 
