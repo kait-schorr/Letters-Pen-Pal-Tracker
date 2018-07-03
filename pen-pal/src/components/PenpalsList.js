@@ -1,16 +1,16 @@
-import React from "react";
-import Penpal from "./Penpal";
-import "./PenpalList.css";
+import React from 'react';
+import Penpal from './Penpal';
+import './PenpalList.css';
 
 const PenpalsList = props => {
   return (
     <div className="friends-card">
-      {props.friends.map(friend => (
+      {props.penpals.map(penpal => (
         <Penpal
-          key={friend.id}
-          name={friend.name}
-          penpal={friend.penpal}
-          letter={friend.letter}
+          key={penpal.id}
+          name={penpal.name}
+          penpal={penpal.penpal}
+          letter={penpal.letter}
           // picture={friend.picture}
         />
       ))}
