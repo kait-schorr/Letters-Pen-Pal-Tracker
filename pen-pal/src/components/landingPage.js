@@ -46,7 +46,6 @@ class Landing extends Component {
   };
 
   loginHandler = event => {
-    console.log(this.props);
     event.preventDefault();
     axios
       .post("http://localhost:5000/api/login", {
@@ -54,7 +53,6 @@ class Landing extends Component {
         password: this.state.password
       })
       .then(response => {
-        console.log("response", response.data);
         this.props.setUser({
           username: this.state.username,
           userId: response.data.id

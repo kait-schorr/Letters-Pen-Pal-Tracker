@@ -10,7 +10,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      user: { username: "", userId: "" }
+      user: undefined
     };
     this.setUser = this.setUser.bind(this);
   }
@@ -26,7 +26,10 @@ class App extends Component {
       <div className="App">
         <NavBar user={this.state.user} />
         <Landing setUser={this.setUser} />
-        <Route path="/" render={() => <PenpalsList user={this.state.user} />} />
+        <Route
+          path="/penpals"
+          render={() => <PenpalsList user={this.state.user} />}
+        />
       </div>
     );
   }

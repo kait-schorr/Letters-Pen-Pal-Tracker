@@ -7,7 +7,7 @@ const Friend = props => {
     <div>
       <Card>
         <CardImg top width="100%" src={props.picture} alt="broken image" />
-        <CardBody>PenPal</CardBody>
+        <CardBody>{props.name}</CardBody>
       </Card>
     </div>
   );
