@@ -6,7 +6,8 @@ import Authenticate from "./Authenticate/Authenticate";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import PenpalForm from "./components/PenpalForm";
 import { Container, Row, Col, Button } from "reactstrap";
-import Landing from "./landingPage"
+import Landing from "./landingPage";
+import NavBar from "./components/NavBar";
 
 const routes = [
   {
@@ -24,15 +25,9 @@ class App extends Component {
     };
   }
 
-<<<<<<< HEAD
-  // componentDidMount() {
-  //   this.setState({ penals: [...penpals] });
-  // }
-=======
   componentDidMount() {
     this.setState({ penpals: [...this.state.penpals] });
   }
->>>>>>> 4a396008346b04a1910ce88b66780a3927aa8b7e
 
   // addPenpal = event => {
   //   event.preventDefault();
@@ -52,7 +47,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <Landing/>
+        <NavBar />
+        <Landing />
         {/* <PenpalForm
           penpal={this.state.penpal}
           submitHandler={this.submitHandler}
