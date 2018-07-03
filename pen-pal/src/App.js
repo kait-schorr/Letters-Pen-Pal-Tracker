@@ -3,13 +3,14 @@ import "./App.css";
 import friends from "./data";
 import FriendsList from "./components/FriendsList";
 import Authenticate from "./Authenticate/Authenticate";
-import { BrowserRouter as Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import FriendForm from "./components/FriendForm";
 import { Container, Row, Col, Button } from "reactstrap";
 
 const routes = [
   {
-    path: "/api/login"
+    path: "/api/login",
+    main: () => <login />
   }
 ];
 
@@ -17,24 +18,24 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      friends: [],
-      friend: ""
+      penpals: [],
+      penpal: ""
     };
   }
 
   componentDidMount() {
-    this.setState({ friends: [...friends] });
+    this.setState({ penals: [...penpals] });
   }
 
-  addFriend = event => {
+  addPenpal = event => {
     event.preventDefault();
-    const friends = this.state.friends.slice();
-    friends.push({
-      name: this.state.friend,
-      address: this.state.friend,
-      letters: this.state.friend
+    const penpals = this.state.penpals.slice();
+    penpals.push({
+      name: this.state.penpal,
+      address: this.state.penpal,
+      letters: this.state.penpal
     });
-    this.setState({ friends, friend: "" });
+    this.setState({ penpals, penpal: "" });
   };
 
   submitHandler = event => {
@@ -44,13 +45,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <FriendForm
-          value={this.state.friend}
+        <PenpalForm
+          penpal={this.state.penpal}
           submitHandler={this.submitHandler}
-          addFriend={this.addFriend}
+          addPenpal={this.addPenpal}
         />
         <h1>Pen Pals</h1>
-        <FriendsList friends={this.state.friends} />
+        <PenpalsList penpals={this.state.penpals} />
       </div>
     );
   }
