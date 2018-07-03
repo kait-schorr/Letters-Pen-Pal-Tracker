@@ -10,6 +10,7 @@ const letterGetByPenpal = (req, res) => {
       .populate("letters")
 
       .then(penpal => {
+        console.log(penpal);
         res.status(200).json(penpal);
       })
       .catch(err => {

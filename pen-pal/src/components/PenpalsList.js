@@ -38,7 +38,7 @@ class PenpalsList extends Component {
       <Container>
         <Row>
           {this.state.penpals.map(penpal => (
-            <Link to="/letters">
+            <Link className="penpal-cards" to={`penpals/${penpal.name}`}>
               <Penpal
                 key={penpal._id}
                 name={penpal.name}

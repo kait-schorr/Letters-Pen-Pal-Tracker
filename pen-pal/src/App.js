@@ -34,6 +34,7 @@ class App extends Component {
           path="/penpals"
           render={() => <PenpalsList user={this.state.user} />}
         />
+        <Route path="/penpals/:name" render={() => <LettersList />} />
         <Route
           path="/letters"
           render={() => <LettersList user={this.state.user} />}

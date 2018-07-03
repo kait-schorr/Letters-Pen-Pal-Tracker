@@ -3,7 +3,7 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
 
 const Friend = props => {
   return (
-    <Card className="col-3">
+    <Card>
       <CardImg top width="100%" src={props.picture} alt="broken image" />
       <CardBody>
         <CardTitle>{props.name}</CardTitle>

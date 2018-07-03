@@ -17,7 +17,9 @@ class LettersList extends Component {
     console.log(config);
     axios
       .get(
-        `http://localhost:5000/api/letters/${this.props.user.userId}`,
+        `http://localhost:5000/api/letters/${this.props.user.userId}/${
+          this.props.key
+        }`,
         config
       )
       .then(response => {

@@ -9,3 +9,15 @@
 .App-intro {
   font-size: large;
 }
+.penpal-cards {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: black;
+}
+.penpal-cards:hover {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: black;
+}
