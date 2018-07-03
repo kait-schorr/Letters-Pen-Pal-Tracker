@@ -26,7 +26,10 @@ const letterAdd = (req, res) => {
         .then(user => {
           res
             .status(200)
-            .json({ Message: `Letter Successfully Saved to users database!` });
+            .json({
+              Message: `Letter Successfully Saved to users database!`,
+              user,
+            });
         })
         .catch(err => {
           res.status(500).json({
